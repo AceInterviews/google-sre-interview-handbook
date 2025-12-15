@@ -1,6 +1,6 @@
 # ⚡ The Google SRE Interview Handbook (2026+ Edition)
 
-> **"The definitive open-source playbook for the modern Site Reliability Engineer. Moving beyond LeetCode to NALS, Linux Internals, and Reliability Architecture."**
+> **"The definitive open-source playbook for the modern Google Site Reliability Engineer (SRE). Moving beyond LeetCode to NALS, Linux Internals, and Reliability Architecture."**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
@@ -19,15 +19,15 @@ This repository contains the **core mental models, checklists, and cheat sheets*
 
 ## 📚 Table of Contents
 
-*   **[The NALS Diagnostic Flowchart](nals-playbook.md)** - How to stabilize and debug large-scale outages.
-*   **[The Linux Internals Cheat Sheet](linux-internals.md)** - The 20 commands that solve 80% of incidents.
-*   **[Coding Patterns for SREs](coding-patterns.md)** - Python/Go patterns for concurrency, retries, and rate limiting.
-*   **[Behavioral: The SRE-STAR(M) Method](behavioral-guide.md)** - How to answer "Tell me about a time..." with metrics.
-*   **[Negotiation Pocket Card](negotiation-tips.md)** - Scripts to maximize your offer.
+*   **[The NALS Diagnostic Flowchart for Google SRE Interviews](nals-playbook.md)** - How to stabilize and debug large-scale outages.
+*   **[The Linux Internals Cheat Sheet for Google SRE Interviews](linux-internals.md)** - The 20 commands that solve 80% of incidents.
+*   **[Coding Patterns for Google SRE Interviews](coding-patterns.md)** - Python/Go patterns for concurrency, retries, and rate limiting.
+*   **[Behavioral: The Google SRE-STAR(M) Method](behavioral-guide.md)** - How to answer "Tell me about a time..." with metrics.
+*   **[Negotiation Pocket Card for Google SRE Interviews](negotiation-tips.md)** - Scripts to maximize your offer.
 
 ---
 
-## 🧠 The SRE Mastery Pyramid
+## 🧠 The Google SRE Mastery Pyramid
 
 To pass the Staff/Senior rounds, you need to move beyond "using tools" to "understanding systems."
 
