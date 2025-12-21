@@ -240,3 +240,57 @@ They must become **reflexes**:
 This repository makes the patterns explicit.
 
 Execution is a separate skill.
+
+---
+
+## Why Knowing the Counter-Patterns Isn’t Enough
+
+Reading what strong candidates do differently creates clarity.
+Executing those behaviors under pressure is harder.
+
+In real Google SRE interviews:
+- these counter-patterns must appear **consistently**
+- they must surface **without prompting**
+- they must hold even when assumptions break
+- they must be narrated clearly while time is constrained
+
+Most candidates can describe the right behavior.
+Very few can **default to it automatically**.
+
+That gap — between recognition and reflex — is where interviews are decided.
+
+---
+
+## How Candidates Actually Build These Reflexes
+
+Candidates who pass reliably don’t just “know” these patterns.
+They rehearse them inside realistic constraints:
+
+- shifting from diagnosis to mitigation mid-scenario
+- rejecting tempting but unsafe designs
+- narrating uncertainty without losing authority
+- prioritizing stability over cleverness
+- stopping work at the right moment
+
+These behaviors are trained through **guided simulation**, not reading.
+
+---
+
+## Where the Full System Fits
+
+This document shows *what good looks like*.
+
+The complete Google SRE interview system trains:
+- when to apply each counter-pattern
+- how interviewers probe after you use one
+- how signals stack across rounds
+- how to recover when you partially miss a signal
+
+That training lives in the full bundle:
+
+👉 **The Complete Google SRE Interview Career Launchpad**  
+https://aceinterviews.gumroad.com/l/Google_SRE_Interviews_Your_Secret_Bundle_to_Conquer
+
+This repository sharpens awareness.  
+The full system builds interview-grade instinct.
+
