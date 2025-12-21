@@ -192,3 +192,67 @@ They are designed to find the engineer who:
 - and can be trusted when information is incomplete
 
 Everything else is secondary.
+
+---
+
+## What You’re Seeing — and What You’re Not
+
+This scorecard reflects **real evaluation dimensions** used in Google SRE interviews.
+
+It does *not* show:
+- full scoring thresholds
+- disqualifying signals
+- tie-breaker criteria
+- cross-round signal aggregation
+- hiring committee calibration logic
+
+Those elements are deliberately omitted here.
+
+Why?
+
+Because scorecards alone don’t teach execution.
+They only explain *why* a decision happened — not how to influence it in real time.
+
+---
+
+## How Interviewers Actually Use These Signals
+
+In practice:
+- no single signal passes or fails you
+- signals compound across rounds
+- weak mitigation behavior outweighs strong design
+- clarity often beats correctness
+- hesitation is scored differently than uncertainty
+
+Candidates rarely fail on one mistake.
+They fail due to **signal drift** they never notice.
+
+---
+
+## How Candidates Train Against the Full Rubric
+
+Strong candidates practice against:
+- interviewer-style prompts
+- real-time constraint changes
+- partial information scenarios
+- mitigation-first scoring
+- narrative clarity under pressure
+
+That level of preparation requires more than static scorecards.
+
+---
+
+## About the Complete Evaluation Framework
+
+The full Google SRE interview system includes:
+- complete interviewer scorecards
+- round-by-round scoring criteria
+- scenario-specific pass/fail thresholds
+- calibration examples from hiring committee logic
+- mock evaluations with structured feedback
+
+👉 **The Complete Google SRE Interview Career Launchpad**  
+https://aceinterviews.gumroad.com/l/Google_SRE_Interviews_Your_Secret_Bundle_to_Conquer
+
+This file reveals the *shape* of evaluation.  
+The full system trains you to score well inside it.
