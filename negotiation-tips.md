@@ -2,46 +2,120 @@
 
 > **"Because confidence is a technical skill."**
 
-Negotiation isn't about being greedy. It's about knowing your market value. This cheat sheet gives you the scripts to handle the most common recruiter questions.
+Google SRE negotiation is not about aggression.
+It is about **signal management, calibration, and timing**.
+
+This pocket card gives you **exact scripts** that align with how Google recruiters and compensation committees actually operate.
+
+Use it verbatim.
 
 ---
 
-## 1. When Recruiter Asks: "What’s your expected compensation?"
+## 1️⃣ When the Recruiter Asks:
+### “What’s your expected compensation?”
 
-**🚫 Don't say:** "$200k." (Don't give a number first).
+**🚫 Don’t say:**  
+“$200k.”  
+(You anchor yourself — and lose leverage immediately.)
 
-**✅ Do say:** "I’m focusing on roles aligned with my skills and level. I’m confident your compensation team has a calibrated range for this band. I’d prefer to understand the scope first before discussing numbers."
+**✅ Do say:**  
+“I’m focusing on roles aligned with my scope and level.  
+I know Google has well-calibrated bands for SRE roles, so I’d prefer to understand the team, expectations, and leveling before discussing numbers.”
 
-**Why:** This deflects the "anchor" and forces them to make the first offer.
+**Why this works**
+- Signals seniority
+- Avoids anchoring
+- Pushes the first number to Google (where leverage belongs)
 
----
-
-## 2. When You Get the Offer
-
-**🚫 Don't say:** "Okay, I accept!" (Too fast).
-
-**✅ Do say:** "This is a great starting point — I’m genuinely excited about the role. I need a day or two to review the details with my family. Can you send the full breakdown in writing?"
-
-**Why:** This buys you time to strategize and counter-offer.
-
----
-
-## 3. The "Magic Question" for Counter-Offers
-
-**The Script:**
-"I really value the team fit and mission. Based on market data for [Level] SRE roles, I was hoping to see something closer to [Target Number] to make this an easy 'Yes' today. **Is this the most competitive package we can put together?**"
-
-**Why:** It is polite, data-driven, and collaborative.
+Recruiters are trained to accept this response.
 
 ---
 
-## 🚀 Maximize Your Offer
+## 2️⃣ When You Receive the Initial Offer
 
-The difference between a "good" offer and a "great" offer can be **$50k+/year**.
+**🚫 Don’t say:**  
+“Sounds good, I accept.”
 
-The **Offer Maximizer Playbook** (part of the full bundle) includes:
-*   Word-for-word scripts for every email and call.
-*   How to leverage competing offers.
-*   The "Googleisms" glossary to sound like an insider.
+**✅ Do say:**  
+“This is a great starting point — I’m genuinely excited about the role.  
+I’d like a day or two to review the full details carefully. Could you send the complete breakdown in writing?”
 
-👉 **[Get the Full Negotiation Playbook Here](https://aceinterviews.gumroad.com/l/Google_SRE_Interviews_Your_Secret_Bundle_to_Conquer)**
+**Why this matters**
+- Buying time is mandatory, not optional
+- Compensation adjustments happen *after* the first offer
+- Google expects candidates to review, not react
+
+Accepting instantly removes negotiation surface.
+
+---
+
+## 3️⃣ The Only Counter-Offer Question That Works
+
+### The Script
+
+“I’m very excited about the team and the problem space.  
+Based on market data for **[L4 / L5 / L6] SRE roles** and my background, I was hoping for something closer to **[target range]** to make this an easy yes.  
+
+**Is this the most competitive package we can put together?**”
+
+**Why this works**
+- Collaborative, not confrontational
+- Mentions level calibration (important at Google)
+- Invites internal advocacy from the recruiter
+
+This question keeps the conversation open instead of defensive.
+
+---
+
+## 4️⃣ Google-Specific Negotiation Reality (Most Candidates Miss This)
+
+- Base salary has limited movement
+- **Equity (RSUs)** is where flexibility exists
+- Signing bonus is often the easiest lever
+- Leveling adjustments matter more than small dollar tweaks
+
+Strong candidates negotiate **structure**, not just numbers.
+
+---
+
+## 5️⃣ What NOT to Say (Instant Red Flags)
+
+- “Another company is paying me more” (without proof)
+- “I deserve this because I worked hard”
+- “I need more money to justify leaving my job”
+- “Can you just bump it a bit?”
+
+Google rewards **data, calmness, and clarity** — not pressure.
+
+---
+
+## 🎯 Final Reminder
+
+Negotiation is not a personality test.
+It is a **measured extension of the interview**.
+
+The same traits Google evaluates in SRE interviews apply here:
+- clarity
+- judgment
+- restraint
+- confidence without entitlement
+
+---
+
+## 🚀 Want the Full Offer Strategy?
+
+This pocket card covers the **core scripts**.
+
+The complete Google SRE system includes an **Offer Maximizer Playbook** with:
+- call-by-call negotiation flows
+- email templates for every stage
+- competing-offer leverage strategies
+- level calibration explanations (L4 → L6)
+- real-world examples of successful counters
+
+👉 **The Complete Google SRE Interview Career Launchpad**  
+
+https://aceinterviews.gumroad.com/l/Google_SRE_Interviews_Your_Secret_Bundle_to_Conquer
+
+Read once.  
+Use forever.
