@@ -49,6 +49,7 @@ This repository exists to make that rubric visible.
 These documents capture **how interviewers think**, not how to “win” interviews.
 
 *   **[The NALS Diagnostic Flowchart for Google SRE Interviews](nals-playbook.md)** - How to stabilize and debug large-scale outages. How strong candidates stabilize first, investigate second, redesign last.
+*   **[NALSD Math Traps: Where Strong Candidates Fail](nalsd-math-traps.md)** – The hidden feasibility checks that silently eliminate candidates.
 *   **[The Linux Internals Cheat Sheet for Google SRE Interviews](linux-internals.md)** - The 20 commands that solve 80% of incidents. The signal hierarchy behind the commands — not command memorization.
 *   **[Coding Patterns for Google SRE Interviews](coding-patterns.md)** - Python/Go patterns for concurrency, retries, and rate limiting. How automation, streaming, and safety are evaluated in coding rounds.
 *   **[Behavioral: The Google SRE-STAR(M) Method](behavioral-guide.md)** - How to answer "Tell me about a time..." with metrics. How Google scores impact, not storytelling.
@@ -377,6 +378,10 @@ This distinction matters.
 
 Many candidates understand everything here — and still fail.
 
+> ⚠️ Note: This repository provides foundational frameworks and mental models.
+> Execution-level practice and full interview
+> simulations live in the complete Google SRE preparation system.
+
 ---
 
 ## 🚀 If You Want to Train Execution (Not Just Understanding)
@@ -425,3 +430,6 @@ Contributions are welcome! Please open an issue or PR if you have additional com
 
 ## 📄 License
 MIT License. Free to use and share.
+
+
+
