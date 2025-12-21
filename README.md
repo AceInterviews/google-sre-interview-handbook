@@ -41,6 +41,289 @@ To pass the Staff/Senior rounds, you need to move beyond "using tools" to "under
 
 ---
 
+# 📘 Interview-Grade Linux Command Playbook
+
+### How Google SREs Use Basic Commands Under Pressure
+
+> **This is not a Linux commands list.**
+> This is how Google evaluates *judgment, signal selection, and reasoning* through command usage.
+
+Most candidates know Linux commands.
+Very few know **which command to reach for first — and why**.
+
+That difference decides interviews.
+
+
+## 🎯 Why This Module Exists
+
+In Google SRE interviews:
+
+* You are **not evaluated on command memorization**
+* You *are* evaluated on:
+
+  * prioritization
+  * signal selection
+  * reasoning under uncertainty
+  * calm narration of thought process
+
+Interviewers listen closely to:
+
+> *“Why did you choose that command?”*
+
+This playbook teaches **command → intent → signal** mapping.
+
+
+## 🧠 The Mental Model Interviewers Expect
+
+Before touching the keyboard, strong SREs silently ask:
+
+1. Is this a **live system or historical issue**?
+2. Am I looking for **symptoms or root cause**?
+3. Is the problem **CPU, memory, I/O, network, or application-level**?
+4. What is the **lowest-cost, highest-signal command** to start with?
+
+This module trains that reflex.
+
+
+
+## 🔥 Section 1 — Log Inspection (The First 5 Minutes Matter)
+
+### `tail -f` — Live Signal, Not Noise
+
+**When to use**
+
+* Incident is ongoing
+* You want to correlate behavior with time
+
+**Interview narration**
+
+> “I’ll start with `tail -f` to observe real-time behavior before making assumptions.”
+
+**Example**
+
+```bash
+tail -f /var/log/nginx/error.log
+```
+
+**Signal interviewers look for**
+
+* You didn’t start grepping blindly
+* You value *temporal correlation*
+
+
+
+### `tail -n` — Context Before Panic
+
+**When to use**
+
+* Incident already occurred
+* You want *recent history*, not the full log
+
+```bash
+tail -n 200 /var/log/app.log
+```
+
+**What this shows**
+
+* You understand **blast radius**
+* You don’t overload yourself with data
+
+
+
+### `grep` + `tail` — Precision Over Volume
+
+Bad candidates:
+
+```bash
+grep error /var/log/app.log
+```
+
+Strong candidates:
+
+```bash
+tail -n 5000 /var/log/app.log | grep -i timeout
+```
+
+**Why this matters**
+
+* Shows scoped thinking
+* Shows intent to reduce false positives
+
+
+
+## ⚙️ Section 2 — Process & Resource Awareness
+
+### `ps aux` — Snapshot Thinking
+
+**When to use**
+
+* Need a fast view of resource-heavy processes
+
+```bash
+ps aux --sort=-%cpu | head
+```
+
+**Interview signal**
+
+* You understand *static snapshots vs dynamic metrics*
+
+
+
+### `top` vs `htop` — Conscious Tool Choice
+
+**Good explanation**
+
+> “I’ll use `top` first for a quick system-wide view before drilling deeper.”
+
+Interviewers care **why**, not **which**.
+
+
+
+## 🧵 Section 3 — File Descriptors & Hidden Killers
+
+### `lsof` — The Silent Outage Detector
+
+**Use cases**
+
+* Port binding failures
+* File descriptor exhaustion
+* Stuck deleted files consuming disk
+
+```bash
+lsof -i :8080
+```
+
+**Narration**
+
+> “This helps confirm whether the service is actually listening or blocked by another process.”
+
+
+
+## 💾 Section 4 — Disk & I/O (Where Seniors Stand Out)
+
+### `df -h` vs `du -sh`
+
+Strong candidates **never confuse these**.
+
+```bash
+df -h
+du -sh /var/*
+```
+
+**Key insight**
+
+* `df` = filesystem view
+* `du` = directory view
+
+Interviewers *love* this distinction.
+
+
+
+## 🧠 Section 5 — Memory & Kernel Signals
+
+### `free -m`
+
+```bash
+free -m
+```
+
+**Strong explanation**
+
+> “I’m checking memory pressure and reclaim behavior before assuming a leak.”
+
+Bonus points if candidate mentions:
+
+* page cache
+* swap behavior
+
+
+
+## 🌐 Section 6 — Network Sanity Checks
+
+### `netstat` / `ss`
+
+```bash
+ss -lntp
+```
+
+**Use when**
+
+* Service unreachable
+* Connection exhaustion suspected
+
+**Narration**
+
+> “This confirms whether the service is bound and accepting connections.”
+
+
+
+## 🔁 Section 7 — Putting It Together (Interview Scenario)
+
+**Question**
+
+> “The site is slow. CPU is normal. What do you do?”
+
+**Strong answer flow**
+
+1. `tail -n` logs for recent anomalies
+2. `ss` to check connection backlog
+3. `iostat` / disk wait (if available)
+4. Only then form hypotheses
+
+This shows:
+✔ restraint
+✔ prioritization
+✔ system thinking
+
+
+
+## 🚫 Common Interview Red Flags
+
+Interviewers immediately notice when candidates:
+
+* start grepping entire logs
+* run commands without explaining intent
+* jump tools without hypothesis
+* over-optimize too early
+
+This module trains you *out* of those habits.
+
+
+## ⭐ Why This Section Improves Coding & Scripting Rounds
+
+Even in **coding interviews**, Google evaluates:
+
+* how you reason about input size
+* streaming vs batch thinking
+* observability mindset
+
+Candidates who think like SREs:
+
+* choose iterators
+* avoid loading everything into memory
+* explain tradeoffs clearly
+
+This command mindset **directly transfers** to code.
+
+
+## 🎯 Final Takeaway
+
+Google doesn’t hire people who know Linux commands.
+
+Google hires people who:
+
+* know **which signal matters first**
+* stay calm under ambiguity
+* explain their thinking clearly
+* choose tools intentionally
+
+This playbook teaches exactly that.
+
+
+
+
+---
+
 ## 🚀 Want the Complete System?
 
 This repository covers the **foundational frameworks**.
