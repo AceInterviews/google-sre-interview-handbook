@@ -303,3 +303,43 @@ That gap is intentional.
 
 This repository documents the *map*.
 Walking it is a separate skill.
+
+---
+
+## Why This Is Hard to Learn From Reading Alone
+
+Recognizing these failure patterns intellectually is not the same as
+**executing correctly under interview pressure**.
+
+In real Google SRE interviews:
+- you must surface these constraints in real time
+- narrate tradeoffs clearly
+- detect impossibility early
+- recover calmly when assumptions break
+
+Most candidates fail not because they lack knowledge,
+but because they haven’t trained the **sequencing reflex**:
+*what to notice first, what to reject, and when to stop designing.*
+
+---
+
+## Where the Full System Comes In
+
+This document represents **one dimension** of the Google SRE evaluation rubric.
+
+The complete preparation system includes:
+- guided NALSD simulations with interviewer-style constraints
+- math-first feasibility drills
+- Linux & kernel-level incident scenarios
+- troubleshooting timelines with scoring criteria
+- coding exercises framed as production automation
+- a 30-day sequencing-based preparation plan
+
+All of that lives in the full bundle:
+
+👉 **The Complete Google SRE Interview Career Launchpad**  
+https://aceinterviews.gumroad.com/l/Google_SRE_Interviews_Your_Secret_Bundle_to_Conquer
+
+This repository is incomplete.  
+The bundle is where candidates train execution, not just understanding.
+
