@@ -1,4 +1,4 @@
-# ❌ Failure Patterns in Google SRE Interviews (2025–2026)
+# ❌ Failure Patterns in Google SRE Interviews (2026+)
 
 > **“Most candidates don’t fail because they lack knowledge.  
 > They fail because they apply the right knowledge at the wrong time.”**
