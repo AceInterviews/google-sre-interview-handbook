@@ -53,6 +53,11 @@ These documents capture **how interviewers think**, not how to “win” intervi
 *   **[Coding Patterns for Google SRE Interviews](coding-patterns.md)** - Python/Go patterns for concurrency, retries, and rate limiting. How automation, streaming, and safety are evaluated in coding rounds.
 *   **[Behavioral: The Google SRE-STAR(M) Method](behavioral-guide.md)** - How to answer "Tell me about a time..." with metrics. How Google scores impact, not storytelling.
 *   **[Negotiation Pocket Card for Google SRE Interviews](negotiation-tips.md)** - Scripts to maximize your offer. How offers are evaluated internally, not how blogs describe negotiation.
+*   **[Failure Patterns in Google SRE Interviews](failure-patterns.md)** – Why strong candidates fail despite knowing the right answers.
+
+
+> **Failure Patterns:**
+> This document catalogs recurring ways senior engineers fail Google SRE interviews — not due to lack of knowledge, but due to mis-sequencing decisions under pressure. It is designed to make failure modes visible, not solvable.
 
 ---
 
