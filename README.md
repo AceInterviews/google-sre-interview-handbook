@@ -1,57 +1,88 @@
-# ⚡ The Google SRE Interview Handbook (2026+ Edition)
+# ⚡ The "Google SRE" Interview Handbook (2026+ Edition)
 
-> **"The definitive open-source playbook for the modern Google Site Reliability Engineer (SRE). Moving beyond LeetCode to NALS, Linux Internals, and Reliability Architecture."**
+> **"The definitive open-source playbook for the modern Google Site Reliability Engineer (SRE). Moving beyond LeetCode to NALS, Linux Internals, and Reliability Architecture.An open-source map of how Google evaluates modern Site Reliability Engineers (SREs) — not a list of things to memorize."**
+
+This repository documents the **mental models, evaluation rubrics, and failure patterns** behind modern Google SRE interviews.
+
+It is not a question bank.
+It is not a LeetCode guide.
+It is not sufficient by itself.
+
+It explains **how you are judged** — not whether you can execute under pressure.
+
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 
-## 🚨 The Problem
-Most Google SRE interview guides are stuck in 2018. They focus on generic algorithms and high-level system design.
 
-But the modern Google SRE interview loop has evolved. It now tests for **Operational Maturity**:
-1.  **NALS (Non-Abstract Large System Design):** Can you diagnose a complex system you didn't build?
-2.  **Linux Internals:** Can you debug a kernel panic or CPU throttle without guessing?
-3.  **Reliability Architecture:** Can you design for 99.999% reliability using error budgets and SLOs?
+## 🚨 Why Most Strong Candidates Still Fail
 
-This repository contains the **core mental models, checklists, and cheat sheets** required to pass these rounds.
+Most Google SRE interview prep material is frozen in 2018:
 
----
+* generic algorithms
+* abstract system design
+* surface-level DevOps checklists
 
-## 📚 Table of Contents
+The modern Google SRE loop evaluates something else entirely:
 
-*   **[The NALS Diagnostic Flowchart for Google SRE Interviews](nals-playbook.md)** - How to stabilize and debug large-scale outages.
-*   **[The Linux Internals Cheat Sheet for Google SRE Interviews](linux-internals.md)** - The 20 commands that solve 80% of incidents.
-*   **[Coding Patterns for Google SRE Interviews](coding-patterns.md)** - Python/Go patterns for concurrency, retries, and rate limiting.
-*   **[Behavioral: The Google SRE-STAR(M) Method](behavioral-guide.md)** - How to answer "Tell me about a time..." with metrics.
-*   **[Negotiation Pocket Card for Google SRE Interviews](negotiation-tips.md)** - Scripts to maximize your offer.
+**Operational Maturity under incomplete information.**
 
----
+Specifically:
 
-## 🧠 The Google SRE Mastery Pyramid
+1. **NALS (Non-Abstract Large System Design)**
+   Can you *diagnose and stabilize* a system you didn’t build — before redesigning it?
 
-To pass the Staff/Senior rounds, you need to move beyond "using tools" to "understanding systems."
+2. **Linux Internals & Kernel Reasoning**
+   Can you debug resource contention without guessing or dashboard hopping?
 
-| Layer | Focus | Key Tools |
-| :--- | :--- | :--- |
-| **Culture** | Blamelessness, Postmortems, Psychological Safety | RCAs, Error Budgets |
-| **Incident Eng** | "Observe → Localize → Fix → Prevent" | Live Debugging |
-| **Observability** | eBPF, PSI, Kernel Telemetry | Prometheus, bcc-tools |
-| **Linux Tools** | `strace`, `perf`, `tcpdump`, `lsof` | Reading queues/resources |
-| **Kernel** | Scheduler, Memory, Network Stack | Syscalls, IRQs, OOM |
+3. **Reliability Architecture**
+   Can you reason in error budgets, trade-offs, and blast radius — not features?
+
+Many senior engineers fail not because they lack knowledge, but because they **sequence actions incorrectly under pressure**.
+
+This repository exists to make that rubric visible.
 
 ---
 
-# 📘 Interview-Grade Linux Command Playbook
+## 📚 What’s Inside (Foundational Only)
 
-### How Google SREs Use Basic Commands Under Pressure
+These documents capture **how interviewers think**, not how to “win” interviews.
 
-> **This is not a Linux commands list.**
-> This is how Google evaluates *judgment, signal selection, and reasoning* through command usage.
+*   **[The NALS Diagnostic Flowchart for Google SRE Interviews](nals-playbook.md)** - How to stabilize and debug large-scale outages. How strong candidates stabilize first, investigate second, redesign last.
+*   **[The Linux Internals Cheat Sheet for Google SRE Interviews](linux-internals.md)** - The 20 commands that solve 80% of incidents. The signal hierarchy behind the commands — not command memorization.
+*   **[Coding Patterns for Google SRE Interviews](coding-patterns.md)** - Python/Go patterns for concurrency, retries, and rate limiting. How automation, streaming, and safety are evaluated in coding rounds.
+*   **[Behavioral: The Google SRE-STAR(M) Method](behavioral-guide.md)** - How to answer "Tell me about a time..." with metrics. How Google scores impact, not storytelling.
+*   **[Negotiation Pocket Card for Google SRE Interviews](negotiation-tips.md)** - Scripts to maximize your offer. How offers are evaluated internally, not how blogs describe negotiation.
 
-Most candidates know Linux commands.
-Very few know **which command to reach for first — and why**.
+---
 
-That difference decides interviews.
+## 🧠 The Google SRE Mastery Pyramid (What Seniority Actually Means)
+
+Passing senior/staff loops requires moving beyond *tool usage* into *systems reasoning*.
+
+| Layer         | What’s Evaluated                    | What Most Candidates Miss     |
+| ------------- | ----------------------------------- | ----------------------------- |
+| Culture       | Blamelessness, RCAs, error budgets  | Treating outages as bugs      |
+| Incident Eng  | Mitigate → Localize → Fix → Prevent | Root-cause obsession          |
+| Observability | Kernel signals > dashboards         | Metrics as lagging indicators |
+| Linux         | Resource contention reasoning       | Command guessing              |
+| Kernel        | Scheduling, memory, networking      | “CPU is fine” fallacy         |
+
+This pyramid is descriptive — not aspirational.
+
+---
+
+## 📘 Interview-Grade Linux Command Playbook (Excerpt)
+
+> This is not a Linux cheatsheet.
+> This is how Google evaluates *judgment* through command choice.
+
+Most candidates know `tail`, `ps`, `lsof`.
+
+Very few can explain **why that command, at that moment, under uncertainty**.
+
+
+That difference is scored and decides interviews.
 
 
 ## 🎯 Why This Module Exists
@@ -319,8 +350,47 @@ Google hires people who:
 
 This playbook teaches exactly that.
 
+---
 
+## 🚫 Where This Repository Intentionally Stops
 
+This repository does **not** teach:
+
+* executing these frameworks under interruption
+* recovering after choosing the wrong first step
+* handling mid-interview constraint reversals
+* narrating trade-offs while being challenged
+
+Those are **execution skills**, not reading skills.
+
+This distinction matters.
+
+Many candidates understand everything here — and still fail.
+
+---
+
+## 🚀 If You Want to Train Execution (Not Just Understanding)
+
+I built a **simulation-based preparation system** specifically to train:
+
+* sequencing under pressure
+* partial-information debugging
+* interviewer-style interruptions
+* recovery after wrong decisions
+
+It exists because reading frameworks does not build reflexes.
+
+👉 **The Complete Google SRE Career Launchpad**
+[https://aceinterviews.gumroad.com/l/Google_SRE_Interviews_Your_Secret_Bundle_to_Conquer](https://aceinterviews.gumroad.com/l/Google_SRE_Interviews_Your_Secret_Bundle_to_Conquer)
+
+Included:
+
+* 20+ failure-driven production simulations
+* coding exercises scored like Google scores them
+* kernel & networking deep dives with interviewer prompts
+* negotiation scripts that reflect real committee logic
+
+Use it or don’t — but understand the difference.
 
 ---
 
