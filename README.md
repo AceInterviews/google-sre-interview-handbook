@@ -48,6 +48,9 @@ This repository exists to make that rubric visible.
 
 These documents capture **how interviewers think**, not how to “win” interviews.
 
+* **[Execution Sequencing: The Hidden Pass/Fail Signal](execution-sequencing.md)** -
+  Why strong candidates still fail Google SRE interviews by doing the *right things in the wrong order*. This file explains how interviewers evaluate **prioritization, mitigation-first thinking, and decision ordering** across NALS, troubleshooting, Linux, coding, and behavioral rounds.
+
 *   **[The NALS Diagnostic Flowchart for Google SRE Interviews](nals-playbook.md)** - How to stabilize and debug large-scale outages. How strong candidates stabilize first, investigate second, redesign last.
 *   **[NALSD Math Traps: Where Strong Candidates Fail](nalsd-math-traps.md)** – The hidden feasibility checks that silently eliminate candidates.
 *   **[The Linux Internals Cheat Sheet for Google SRE Interviews](linux-internals.md)** - The 20 commands that solve 80% of incidents. The signal hierarchy behind the commands — not command memorization.
