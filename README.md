@@ -15,6 +15,12 @@ It explains **how you are judged** — not whether you can execute under pressur
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 
 
+> ### 🏆 Success Story (Jan 2026)
+> *"I took your bundle... it helped me clear my practical coding/scripting round for an **L4 SRE role at Google**. It didn't just give me questions; it taught me how to **talk like an SRE**, using the right words like 'streaming' and 'iterators.' It was much more than Time and Space complexities."*
+> 
+> — **Ram M.**, (Cleared Google L4 Coding Round)
+
+
 ## 🚨 Why Most Strong Candidates Still Fail
 
 Most Google SRE interview prep material is frozen in 2018:
