@@ -23,6 +23,13 @@ It explains **how you are judged** — not whether you can execute under pressur
 
 ## 🚨 Why Most Strong Candidates Still Fail
 
+| 2020 Google SRE Interview Style | 2026 Google SRE Reality |
+| :--- | :--- |
+| Can you debug an outage? | Can you **auto-mitigate** before a human is paged? |
+| Do you know Linux commands? | Do you have **kernel-level intuition** (eBPF, CFS)? |
+| Can you design a scalable service? | Can you model the **economic/cost trade-offs** of that design? |
+
+
 Most Google SRE interview prep material is frozen in 2018:
 
 * generic algorithms
@@ -35,7 +42,7 @@ The modern Google SRE loop evaluates something else entirely:
 
 Specifically:
 
-1. **NALS (Non-Abstract Large System Design)**
+1. **NALSD (Non-Abstract Large System Design)**
    Can you *diagnose and stabilize* a system you didn’t build — before redesigning it?
 
 2. **Linux Internals & Kernel Reasoning**
@@ -57,8 +64,8 @@ These documents capture **how interviewers think**, not how to “win” intervi
 * **[Execution Sequencing: The Hidden Pass/Fail Signal](execution-sequencing.md)** -
   Why strong candidates still fail Google SRE interviews by doing the *right things in the wrong order*. This file explains how interviewers evaluate **prioritization, mitigation-first thinking, and decision ordering** across NALS, troubleshooting, Linux, coding, and behavioral rounds.
 
-*   **[The NALS Diagnostic Flowchart for Google SRE Interviews](nals-playbook.md)** - How to stabilize and debug large-scale outages. How strong candidates stabilize first, investigate second, redesign last.
-*   **[NALSD Math Traps: Where Strong Candidates Fail](nalsd-math-traps.md)** – The hidden feasibility checks that silently eliminate candidates.
+*   **[The NALSD Diagnostic Flowchart for Google SRE Interviews](nals-playbook.md)** - How to stabilize and debug large-scale outages. How strong candidates stabilize first, investigate second, redesign last.
+*   **[NALSD Math Traps: Where Strong Candidates Fail](nalsd-math-traps.md)** – The hidden feasibility checks (e.g., 5PB over 10Gbps link = 46 days) that silently eliminate candidates who ignore physics.
 *   **[The Linux Internals Cheat Sheet for Google SRE Interviews](linux-internals.md)** - The 20 commands that solve 80% of incidents. The signal hierarchy behind the commands — not command memorization.
 *   **[Coding Patterns for Google SRE Interviews](coding-patterns.md)** - Python/Go patterns for concurrency, retries, and rate limiting. How automation, streaming, and safety are evaluated in coding rounds.
 *   **[Behavioral: The Google SRE-STAR(M) Method](behavioral-guide.md)** - How to answer "Tell me about a time..." with metrics. How Google scores impact, not storytelling.
