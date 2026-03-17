@@ -4,9 +4,9 @@
 
 This repository documents the **mental models, evaluation rubrics, and failure patterns** behind modern Google SRE interviews.
 
-It is not a question bank.
-It is not a LeetCode guide.
-It is not sufficient by itself.
+It is not a question bank.  
+It is not a LeetCode guide.  
+It is not sufficient by itself. 
 
 It explains **how you are judged** — not whether you can execute under pressure.
 
@@ -425,14 +425,11 @@ If you want the **complete end-to-end preparation system**—including practice 
 👉 **The Complete Google SRE Career Launchpad**
 [https://aceinterviews.gumroad.com/l/Google_SRE_Interviews_Your_Secret_Bundle_to_Conquer](https://aceinterviews.gumroad.com/l/Google_SRE_Interviews_Your_Secret_Bundle_to_Conquer)
 
-**What's included in the full bundle:**
-*   📘 **20+ Production Scenarios:** Deep dives into Kernel Panics, BGP Leaks, and connection storms.
-*   🐍 **Coding Workbooks (Python & Go):** 70+ practice problems focusing on concurrency, automation, and safety.
-*   💼 **The Negotiation Playbook:** Word-for-word scripts to increase your offer.
-*   📅 **The 30-Day Prep Schedule:** A day-by-day roadmap to interview readiness.
-* coding exercises scored like Google scores them
-* kernel & networking deep dives with interviewer prompts
-* negotiation scripts that reflect real committee logic
+**What's included in the full system:**
+*   📘 **20+ Production Scenarios:** Deep dives into Kernel Panics, BGP Leaks, and connection storms, complete with interviewer scoring prompts.
+*   🐍 **Coding Workbooks (Python & Go):** 70+ practice problems focusing on concurrency, automation, and safety—scored exactly how Google scores them.
+*   💼 **The Offer Maximizer:** Word-for-word negotiation scripts that reflect real compensation committee logic to increase your final offer.
+*   📅 **The 30-Day Prep Schedule:** A structured, day-by-day roadmap to interview readiness.
 
 Use it or don’t — but understand the difference.
 
