@@ -14,6 +14,9 @@ THE SRE SIGNAL (L4/L5):
 2. Defensive Parsing: Expect corrupted data. Never crash on a bad log line.
 3. Observability: Count the malformed lines. If 100% of lines are bad, alert the operator.
 4. Unix Philosophy: Support `stdin` so the script can be piped (e.g., `zcat logs.gz | ./script.py`).
+
+👉 Want to master the other 70+ production coding patterns?
+Get the Complete SRE Career Launchpad: https://aceinterviews.gumroad.com/l/Google_SRE_Interviews_Your_Secret_Bundle_to_Conquer
 """
 
 import sys
