@@ -1,5 +1,76 @@
+# 🗺️ Google SRE Interview Learning Path (2026+ Edition)
 
-# 🗺️ The Google SRE Interview Roadmap (2026+ Edition)
+> **"Don't just read files randomly. Follow the curriculum."**
+
+This roadmap is designed to take you from a standard Software or DevOps Engineer to a **Google-caliber Reliability Architect**. 
+
+If you are 2-4 weeks out from your Google SRE onsite, read these documents in this exact order.
+
+---
+
+### 🚨 Phase 0: The Paradigm Shift (Start Here)
+*Goal: Shatter your "Software Engineer" interview habits and understand how the Google SRE Hiring Committee actually evaluates you.*
+
+1. **[SRE vs. SWE System Design](sre-vs-swe-design.md)**: Why drawing a global database will fail you, and why SREs design "Cells" instead.
+2. **[The Mock Interview Transcript](mock-interview-transcript.md)**: A fly-on-the-wall look at a live NALS round. See exactly why the "Debugger" fails and the "Commander" passes.
+3. **[Interviewer Scorecards](interviewer-scorecards.md)**: The 5 hidden dimensions interviewers are filling out while you are busy talking on the whiteboard.
+
+---
+
+### 🟢 Phase 1: The SRE Mindset
+*Goal: Internalize the "Mitigate First" operational reflex.*
+
+*   **[Execution Sequencing](01-SRE-Mindset/execution-sequencing.md)**: Master the art of doing the right things in the right order.
+*   **[Failure Patterns](01-SRE-Mindset/failure-patterns.md)**: Study the 8 traps that eliminate Senior Engineers.
+*   **[Counter-Patterns](01-SRE-Mindset/counter-patterns.md)**: Learn the precise vocabulary and habits that signal an L5/L6 hire.
+
+---
+
+### 🔵 Phase 2: NALSD & System Reasoning
+*Goal: Master the math and physics of large-scale infrastructure.*
+
+*   **[The NALS Playbook](02-NALSD-System-Design/nals-playbook.md)**: Learn the 10-step diagnostic flowchart for broken systems.
+*   **[NALSD Math Traps](02-NALSD-System-Design/nalsd-math-traps.md)**: Learn the "BDP" and "Bandwidth" feasibility checks. If you can't do this math, your architecture is fiction.
+
+---
+
+### 🔴 Phase 3: Linux & Troubleshooting
+*Goal: Develop kernel-level intuition and ditch the dashboards.*
+
+*   **[Linux Internals Cheat Sheet](03-Linux-Troubleshooting/linux-internals.md)**: The 20 commands that solve 80% of incidents (and the signals they send).
+*   **Incident Playbooks**: Navigate to the `03-Linux-Troubleshooting/` folder to read the exact operational runbooks for **Kernel Panics**, **BGP Leaks**, and **TLS Expiries**.
+
+---
+
+### 🟡 Phase 4: Coding & Automation
+*Goal: Write code that survives 3 A.M. production loads.*
+
+*   **[Coding Patterns for SREs](04-Coding-Automation/coding-patterns.md)**: Why LeetCode hurts you. Master streaming, bounded concurrency, and defensive parsing.
+*   **Production Code**: Check the `04-Coding-Automation/` folder for actual Go and Python scripts (like `safe_log_streamer.py`) that demonstrate these patterns in code.
+
+---
+
+### 🟣 Phase 5: Behavioral & Offer Negotiation
+*Goal: Final polish and maximizing your total compensation.*
+
+*   **[The SRE-STAR(M) Method](05-Behavioral-Negotiation/behavioral-guide.md)**: Rehearse your incident stories by anchoring them in metrics and error budgets.
+*   **[Salary Negotiation Pocket Card](05-Behavioral-Negotiation/negotiation-tips.md)**: The exact scripts to use when the recruiter asks for your "expected number."
+
+---
+
+## 🚀 Transition from "Understanding" to "Execution"
+
+This repository provides the **Frameworks**.  
+The **Complete Career Launchpad** provides the **Practice**.
+
+Reading about "Execution Sequencing" is easy. Executing it flawlessly when an interviewer changes a system constraint at minute 35 of the interview is incredibly hard. 
+
+If you want the full training system with **70+ practice coding scenarios**, **10+ deep-dive NALSD mock simulations**, and the **30-Day Guided Schedule**, upgrade to the premium bundle:
+
+👉 **[Get the Complete Google SRE Interview Career Launchpad Here](https://aceinterviews.gumroad.com/l/Google_SRE_Interviews_Your_Secret_Bundle_to_Conquer)**
+---
+
+# 🗺️ L5/L6: The Google SRE Interview Roadmap (2026+ Edition)
 
 > **"Mastering the Google SRE loop is not a matter of 'grinding.' It is a matter of sequencing."**
 
