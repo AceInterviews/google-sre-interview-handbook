@@ -420,33 +420,21 @@ I built a **simulation-based preparation system** specifically to train:
 
 It exists because reading frameworks does not build reflexes.
 
-👉 **The Complete Google SRE Career Launchpad**
-[https://aceinterviews.gumroad.com/l/Google_SRE_Interviews_Your_Secret_Bundle_to_Conquer](https://aceinterviews.gumroad.com/l/Google_SRE_Interviews_Your_Secret_Bundle_to_Conquer)
-
-Included:
-
-* 20+ failure-driven production simulations
-* coding exercises scored like Google scores them
-* kernel & networking deep dives with interviewer prompts
-* negotiation scripts that reflect real committee logic
-
-Use it or don’t — but understand the difference.
-
----
-
-## 🚀 Want the Complete System?
-
-This repository covers the **foundational frameworks**.
-
 If you want the **complete end-to-end preparation system**—including practice workbooks, mock simulations, and deep-dive scenarios—check out the full bundle:
 
-👉 **[The Complete Google SRE Career Launchpad (Gumroad)](https://aceinterviews.gumroad.com/l/Google_SRE_Interviews_Your_Secret_Bundle_to_Conquer)**
+👉 **The Complete Google SRE Career Launchpad**
+[https://aceinterviews.gumroad.com/l/Google_SRE_Interviews_Your_Secret_Bundle_to_Conquer](https://aceinterviews.gumroad.com/l/Google_SRE_Interviews_Your_Secret_Bundle_to_Conquer)
 
 **What's included in the full bundle:**
 *   📘 **20+ Production Scenarios:** Deep dives into Kernel Panics, BGP Leaks, and connection storms.
 *   🐍 **Coding Workbooks (Python & Go):** 70+ practice problems focusing on concurrency, automation, and safety.
 *   💼 **The Negotiation Playbook:** Word-for-word scripts to increase your offer.
 *   📅 **The 30-Day Prep Schedule:** A day-by-day roadmap to interview readiness.
+* coding exercises scored like Google scores them
+* kernel & networking deep dives with interviewer prompts
+* negotiation scripts that reflect real committee logic
+
+Use it or don’t — but understand the difference.
 
 ---
 
