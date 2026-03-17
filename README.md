@@ -57,29 +57,38 @@ This repository exists to make that rubric visible.
 
 ---
 
-## 📚 What’s Inside (Foundational Only)
+## 📚 The Playbooks: Mental Models & Signals
 
-These documents capture **how interviewers think**, not how to “win” interviews.
+These documents deconstruct **how interviewers think**, moving beyond generic "prep" into high-level operational reasoning.
 
-* **[Execution Sequencing: The Hidden Pass/Fail Signal](execution-sequencing.md)** -
-  Why strong candidates still fail Google SRE interviews by doing the *right things in the wrong order*. This file explains how interviewers evaluate **prioritization, mitigation-first thinking, and decision ordering** across NALS, troubleshooting, Linux, coding, and behavioral rounds.
+### 🧠 Pillar 1: The SRE Mindset & Strategy
+*   **[Execution Sequencing: The Hidden Pass/Fail Signal](01-SRE-Mindset/execution-sequencing.md)** - Why strong candidates fail by doing the right things in the wrong order.
+*   **[Failure Patterns in Google SRE Interviews](01-SRE-Mindset/failure-patterns.md)** - A catalog of recurring ways senior engineers disqualify themselves.
+*   **[Counter-Patterns: What Passing Candidates Do Differently](01-SRE-Mindset/counter-patterns.md)** - The behavioral habits that separate a "Hire" from a "No Hire."
 
-*   **[The NALSD Diagnostic Flowchart for Google SRE Interviews](nals-playbook.md)** - How to stabilize and debug large-scale outages. How strong candidates stabilize first, investigate second, redesign last.
-*   **[NALSD Math Traps: Where Strong Candidates Fail](nalsd-math-traps.md)** – The hidden feasibility checks (e.g., 5PB over 10Gbps link = 46 days) that silently eliminate candidates who ignore physics.
-*   **[The Linux Internals Cheat Sheet for Google SRE Interviews](linux-internals.md)** - The 20 commands that solve 80% of incidents. The signal hierarchy behind the commands — not command memorization.
-*   **[Coding Patterns for Google SRE Interviews](coding-patterns.md)** - Python/Go patterns for concurrency, retries, and rate limiting. How automation, streaming, and safety are evaluated in coding rounds.
-*   **[Behavioral: The Google SRE-STAR(M) Method](behavioral-guide.md)** - How to answer "Tell me about a time..." with metrics. How Google scores impact, not storytelling.
-*   **[Negotiation Pocket Card for Google SRE Interviews](negotiation-tips.md)** - Scripts to maximize your offer. How offers are evaluated internally, not how blogs describe negotiation.
-*   **[Interviewer Scorecards: How Candidates Are Evaluated](interviewer-scorecards.md)** – The internal dimensions interviewers use to assess trust, judgment, and seniority. This repository exposes evaluation lenses, not solutions — because performance under pressure cannot be memorized.
-*   **[Counter-Patterns: What Passing Candidates Do Differently](counter-patterns.md)** – The behavioral habits that separate hires from rejections.
-*   **[Failure Patterns in Google SRE Interviews](failure-patterns.md)** – Why strong candidates fail despite knowing the right answers.
+### 🏗️ Pillar 2: NALSD & System Design
+*   **[⚔️ SRE vs. SWE: The Architectural Divide](sre-vs-swe-design.md)** - A side-by-side comparison of a "functional" vs. a "hardened" design.
+*   **[The NALSD Diagnostic Flowchart](02-NALSD-System-Design/nals-playbook.md)** - The 8-step framework for diagnosing and scaling existing global systems.
+*   **[NALSD Math Traps: Where Candidates Fail](02-NALSD-System-Design/nalsd-math-traps.md)** - The hidden physics and feasibility checks (e.g., Bandwidth vs. RTO).
+*   **[🎧 Mock Interview Transcript](mock-interview-transcript.md)** - A fly-on-the-wall look at a Staff-level NALSD response vs. a Junior response.
 
-> **Counter-Patterns**
-> This document captures how successful Google SRE candidates sequence decisions, narrate intent, and manage uncertainty differently. It focuses on behavior under pressure, not technical knowledge.
+### 🐧 Pillar 3: Linux Internals & Troubleshooting
+*   **[The Tactical Linux Cheat Sheet](03-Linux-Troubleshooting/linux-internals.md)** - The 20 commands that solve 80% of production incidents.
+*   **[Incident Playbook Library](03-Linux-Troubleshooting/)** - Step-by-step diagnostic runbooks for:
+    *   [Kernel Panics & D-State](03-Linux-Troubleshooting/incident-playbook-kernel-panic.md)
+    *   [BGP Route Leaks](03-Linux-Troubleshooting/incident-playbook-bgp-leak.md)
+    *   [Disk I/O Saturation](03-Linux-Troubleshooting/incident-playbook-disk-pressure.md)
+    *   [TLS Expiry Cascades](03-Linux-Troubleshooting/incident-playbook-tls-expiry.md)
 
+### 🐍 Pillar 4: Coding & Automation
+*   **[Coding Patterns for Google SREs](04-Coding-Automation/coding-patterns.md)** - Production-safe patterns for concurrency, retries, and streaming.
+*   **[Reference Implementation: Concurrent Health Checker](04-Coding-Automation/concurrent_health_checker.go)** - Production-grade Go code with context timeouts.
+*   **[Reference Implementation: Safe Log Streamer](04-Coding-Automation/safe_log_streamer.py)** - O(1) Memory Python pattern for TB-scale logs.
 
-> **Failure Patterns:**
-> This document catalogs recurring ways senior engineers fail Google SRE interviews — not due to lack of knowledge, but due to mis-sequencing decisions under pressure. It is designed to make failure modes visible, not solvable.
+### 💼 Pillar 5: Behavioral & Negotiation
+*   **[Interviewer Scorecards: How You Are Graded](05-Behavioral-Negotiation/interviewer-scorecards.md)** - The 5 internal dimensions Google uses to assess seniority.
+*   **[The Google SRE-STAR(M) Method](05-Behavioral-Negotiation/behavioral-guide.md)** - How to pivot behavioral stories from "heroism" to "systemic prevention."
+*   **[Negotiation Pocket Card](05-Behavioral-Negotiation/negotiation-tips.md)** - Exact scripts to handle the "Expected Salary" trap and maximize equity.
 
 ---
 
