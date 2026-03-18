@@ -1,4 +1,4 @@
-# 🕵️ Real-World Interview Patterns at Google (2025-2026)
+# 🕵️ Real-World Interview Patterns at Google (2026+ Interviews)
 
 > **"Google doesn't just hire for what you know. They hire for how you react when what you know isn't enough."**
 
