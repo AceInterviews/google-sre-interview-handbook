@@ -43,7 +43,7 @@ If you only have 15 minutes today, read these files located in the root director
 *   👉 **[SRE vs. SWE System Design](sre-vs-swe-design.md):** The exact difference between an L4 and an L6 architecture.
 
 ### 📁 Folder 01: The SRE Mindset
-*   **What's inside:** `execution-sequencing.md`, `failure-patterns.md`, `counter-patterns.md`
+*   **What's inside:** `execution-sequencing.md`, `failure-patterns.md`, `counter-patterns.md`, `REAL-INTERVIEW-PATTERNS.md`
 *   **How to use it:** Read these to understand *why* doing the right thing in the wrong order causes you to fail.
 
 ### 📁 Folder 02: NALSD & System Design
