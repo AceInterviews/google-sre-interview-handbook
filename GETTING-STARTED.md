@@ -59,7 +59,7 @@ If you only have 15 minutes today, read these files located in the root director
 *   **How to use it:** Learn why streaming, contexts, and exponential backoff with jitter are mandatory for passing.
 
 ### 📁 Folder 05: Behavioral & Negotiation
-*   **What's inside:** `behavioral-guide.md`, `negotiation-tips.md`, `night-before-onsite.md`.
+*   **What's inside:** `behavioral-guide.md`, `negotiation-tips.md`.
 *   **How to use it:** Learn the SRE-STAR(M) method to prove your impact, and use the exact scripts to maximize your final offer.
 
 ---
