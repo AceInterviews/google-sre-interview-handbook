@@ -11,6 +11,16 @@ Before you click into the folders, you need to understand how to consume this in
 
 ---
 
+## ⭐ Success Story: From This Handbook to Google L4 SRE
+
+> "I took your bundle... it helped me **clear my practical coding/scripting round for an L4 SRE SE role at Google.** It not only served my need for having a question bank, but also **taught me how to talk like an SRE**, which I think was really one of the most important and overlooked factors.
+>
+> In my mock interview by a Googler, he told me that **I was using the right words like 'streaming' and 'iterators'** while coding. This module taught me it was much more than just Time and Space Complexities."
+> 
+> — **Ram**, *Verified Candidate (L4 SRE Loop, January 2026)*
+
+---
+
 ## 🛑 The Mental Shift (Read This First)
 
 Most candidates approach SRE interviews the wrong way. If you try to study for this like a standard FAANG Software Engineering loop, you will fail.
@@ -57,6 +67,7 @@ If you only have 15 minutes today, read these files located in the root director
 ### 📁 Folder 04: Coding & Automation
 *   **What's inside:** `coding-patterns.md`, plus real, heavily-commented production code (`token_bucket.go`, `safe_log_streamer.py`).
 *   **How to use it:** Learn why streaming, contexts, and exponential backoff with jitter are mandatory for passing.
+> *"Check out how our [streaming and iterator patterns](04-Coding-Automation/coding-patterns.md) helped a recent candidate pass the Google L4 Scripting round."*
 
 ### 📁 Folder 05: Behavioral & Negotiation
 *   **What's inside:** `behavioral-guide.md`, `negotiation-tips.md`.
