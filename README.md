@@ -1,5 +1,8 @@
 # ⚡ The "Google SRE" Interview Handbook (2026+ Edition)
 
+> *"This is the definitive open-source study guide and playbook for the **Google SRE Interview** in 2026+ Interviews. If you are preparing for the **Non-Abstract Large System Design (NALSD)** round, **Linux internals troubleshooting**, or the **SRE coding interview**, these frameworks and diagnostic flowcharts will teach you how the Hiring Committee evaluates candidates."*
+
+
 > **"The definitive open-source playbook for the modern Google Site Reliability Engineer (SRE). Moving beyond LeetCode to NALS, Linux Internals, and Reliability Architecture.An open-source map of how Google evaluates modern Site Reliability Engineers (SREs) — not a list of things to memorize."**
 
 This repository documents the **mental models, evaluation rubrics, and failure patterns** behind modern Google SRE interviews.
