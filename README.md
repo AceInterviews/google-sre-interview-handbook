@@ -60,38 +60,47 @@ This repository exists to make that rubric visible.
 
 ---
 
-## 📚 The Playbooks: Mental Models & Signals
+## 🗺️ Learning Path: How to Navigate this Handbook
 
-These documents deconstruct **how interviewers think**, moving beyond generic "prep" into high-level operational reasoning.
+To get the most out of this resource, we recommend following the structured path below. These documents move from high-level mindset to deep technical execution.
+
+### 🏁 Step 0: Onboarding & Roadmap
+*   **[🚀 Getting Started](GETTING-STARTED.md)** - How to use this repository effectively.
+*   **[🛤️ Learning Path](LEARNING-PATH.md)** - The recommended order of study for different seniority levels.
+*   **[📅 Project Roadmap](ROADMAP.md)** - Ongoing updates and the future of SRE (AIOps, FinOps, etc.).
 
 ### 🧠 Pillar 1: The SRE Mindset & Strategy
-*   **[Execution Sequencing: The Hidden Pass/Fail Signal](01-SRE-Mindset/execution-sequencing.md)** - Why strong candidates fail by doing the right things in the wrong order.
-*   **[Failure Patterns in Google SRE Interviews](01-SRE-Mindset/failure-patterns.md)** - A catalog of recurring ways senior engineers disqualify themselves.
-*   **[Counter-Patterns: What Passing Candidates Do Differently](01-SRE-Mindset/counter-patterns.md)** - The behavioral habits that separate a "Hire" from a "No Hire."
+*   **[🕵️ Real Interview Patterns](REAL-INTERVIEW-PATTERNS_2.md)** - The meta-game: How interviewers use silence and twists to test you.
+*   **[⏱️ Execution Sequencing](01-SRE-Mindset/execution-sequencing.md)** - The hidden pass/fail signal: Doing the right things in the right order.
+*   **[❌ Failure Patterns](01-SRE-Mindset/failure-patterns.md)** - A catalog of recurring ways senior engineers disqualify themselves.
+*   **[✅ Counter-Patterns](01-SRE-Mindset/counter-patterns.md)** - The behavioral habits that separate a "Hire" from a "No Hire."
 
 ### 🏗️ Pillar 2: NALSD & System Design
-*   **[⚔️ SRE vs. SWE: The Architectural Divide](sre-vs-swe-design.md)** - A side-by-side comparison of a "functional" vs. a "hardened" design.
-*   **[The NALSD Diagnostic Flowchart](02-NALSD-System-Design/google-nalsd-non-abstract-large-system-design-guide.md)** - The 8-step framework for diagnosing and scaling existing global systems.
-*   **[NALSD Math Traps: Where Candidates Fail](02-NALSD-System-Design/nalsd-math-traps.md)** - The hidden physics and feasibility checks (e.g., Bandwidth vs. RTO).
-*   **[🎧 Mock Interview Transcript](mock-interview-transcript.md)** - A fly-on-the-wall look at a Staff-level NALSD response vs. a Junior response.
+*   **[⚔️ SRE vs. SWE Design](sre-vs-swe-design.md)** -  A side-by-side comparison of functional vs. hardened architecture.
+*   **[🎧 Mock Interview Transcript](mock-interview-transcript.md)** - A fly-on-the-wall look at a live NALS round with grader notes.
+*   **[📉 The NALS Playbook](02-NALSD-System-Design/google-nalsd-non-abstract-large-system-design-guide.md)** - The 8-step framework for diagnosing and scaling existing global systems.
+*   **[🧮 NALSD Math Traps](02-NALSD-System-Design/nalsd-math-traps.md)** - The hidden physics: Bandwidth, IOPS, and Latency feasibility checks.
 
 ### 🐧 Pillar 3: Linux Internals & Troubleshooting
-*   **[The Tactical Linux Cheat Sheet](03-Linux-Troubleshooting/google-sre-linux-troubleshooting-commands.md)** - The 20 commands that solve 80% of production incidents.
-*   **[Incident Playbook Library](03-Linux-Troubleshooting/)** - Step-by-step diagnostic runbooks for:
-    *   [Kernel Panics & D-State](03-Linux-Troubleshooting/incident-playbook-kernel-panic.md)
-    *   [BGP Route Leaks](03-Linux-Troubleshooting/incident-playbook-bgp-leak.md)
-    *   [Disk I/O Saturation](03-Linux-Troubleshooting/incident-playbook-disk-pressure.md)
-    *   [TLS Expiry Cascades](03-Linux-Troubleshooting/incident-playbook-tls-expiry.md)
+*   **[📜 Tactical Linux Cheat Sheet](03-Linux-Troubleshooting/google-sre-linux-troubleshooting-commands.md)** - The 20 commands that solve 80% of production incidents.
+*   **[🔥 Incident Playbook: Kernel Panics](03-Linux-Troubleshooting/incident-playbook-kernel-panic.md)** - How to debug a frozen node you can't SSH into.
+*   **[🌐 Incident Playbook: BGP Leaks](03-Linux-Troubleshooting/incident-playbook-bgp-leak.md)** - Troubleshooting when the Internet thinks you don't exist.
+*   **[💾 Incident Playbook: Disk Pressure](03-Linux-Troubleshooting/incident-playbook-disk-pressure.md)** - Throughput vs. IOPS: The silent latency killer.
+*   **[🔒 Incident Playbook: TLS Expiry](03-Linux-Troubleshooting/incident-playbook-tls-expiry.md)** - Handling global outages caused by certificate chain failures.
 
 ### 🐍 Pillar 4: Coding & Automation
-*   **[Coding Patterns for Google SREs](04-Coding-Automation/coding-patterns.md)** - Production-safe patterns for concurrency, retries, and streaming.
-*   **[Reference Implementation: Concurrent Health Checker](04-Coding-Automation/concurrent_health_checker.go)** - Production-grade Go code with context timeouts.
-*   **[Reference Implementation: Safe Log Streamer](04-Coding-Automation/safe_log_streamer.py)** - O(1) Memory Python pattern for TB-scale logs.
+*   **[🛠️ Coding Patterns for SREs](04-Coding-Automation/coding-patterns.md)** - Production-safe patterns for concurrency, retries, and streaming.
+*   **[🐍 Python: Safe Log Streamer](04-Coding-Automation/safe_log_streamer.py)** - O(1) Memory pattern for TB-scale logs.
+*   **[🐹 Go: Token Bucket Limiter](04-Coding-Automation/concurrent_health_checker.go)** - Real-world concurrency and rate-limiting logic.
 
 ### 💼 Pillar 5: Behavioral & Negotiation
-*   **[Interviewer Scorecards: How You Are Graded](05-Behavioral-Negotiation/interviewer-scorecards.md)** - The 5 internal dimensions Google uses to assess seniority.
-*   **[The Google SRE-STAR(M) Method](05-Behavioral-Negotiation/google-sre-behavioral-interview-questions-star-method.md)** - How to pivot behavioral stories from "heroism" to "systemic prevention."
-*   **[Negotiation Pocket Card](05-Behavioral-Negotiation/negotiation-tips.md)** - Exact scripts to handle the "Expected Salary" trap and maximize equity.
+*   **[🧾 Interviewer Scorecards](interviewer-scorecards.md)** - The 5 internal dimensions Google uses to assess seniority.
+*   **[💬 The SRE-STAR(M) Method](05-Behavioral-Negotiation/google-sre-behavioral-interview-questions-star-method.md)** - How to pivot from "heroism" to "systemic prevention."
+*   **[💰 Negotiation Pocket Card](05-Behavioral-Negotiation/negotiation-tips.md)** - Exact scripts to handle the "Expected Salary" trap.
+
+
+### 🌙 The Final Prep
+*   **[⭐ Night-Before-Onsite Checklist](Cheat_Sheet-Night_Before_Onsite.md)** - It is 12 hours before your Google SRE loop. Close all your other tabs. Go through this 5-step pre-flight checklist in order.
 
 ---
 
