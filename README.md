@@ -68,12 +68,12 @@ These documents deconstruct **how interviewers think**, moving beyond generic "p
 
 ### 🏗️ Pillar 2: NALSD & System Design
 *   **[⚔️ SRE vs. SWE: The Architectural Divide](sre-vs-swe-design.md)** - A side-by-side comparison of a "functional" vs. a "hardened" design.
-*   **[The NALSD Diagnostic Flowchart](02-NALSD-System-Design/nals-playbook.md)** - The 8-step framework for diagnosing and scaling existing global systems.
+*   **[The NALSD Diagnostic Flowchart](02-NALSD-System-Design/google-nalsd-non-abstract-large-system-design-guide.md)** - The 8-step framework for diagnosing and scaling existing global systems.
 *   **[NALSD Math Traps: Where Candidates Fail](02-NALSD-System-Design/nalsd-math-traps.md)** - The hidden physics and feasibility checks (e.g., Bandwidth vs. RTO).
 *   **[🎧 Mock Interview Transcript](mock-interview-transcript.md)** - A fly-on-the-wall look at a Staff-level NALSD response vs. a Junior response.
 
 ### 🐧 Pillar 3: Linux Internals & Troubleshooting
-*   **[The Tactical Linux Cheat Sheet](03-Linux-Troubleshooting/linux-internals.md)** - The 20 commands that solve 80% of production incidents.
+*   **[The Tactical Linux Cheat Sheet](03-Linux-Troubleshooting/google-sre-linux-troubleshooting-commands.md)** - The 20 commands that solve 80% of production incidents.
 *   **[Incident Playbook Library](03-Linux-Troubleshooting/)** - Step-by-step diagnostic runbooks for:
     *   [Kernel Panics & D-State](03-Linux-Troubleshooting/incident-playbook-kernel-panic.md)
     *   [BGP Route Leaks](03-Linux-Troubleshooting/incident-playbook-bgp-leak.md)
@@ -87,7 +87,7 @@ These documents deconstruct **how interviewers think**, moving beyond generic "p
 
 ### 💼 Pillar 5: Behavioral & Negotiation
 *   **[Interviewer Scorecards: How You Are Graded](05-Behavioral-Negotiation/interviewer-scorecards.md)** - The 5 internal dimensions Google uses to assess seniority.
-*   **[The Google SRE-STAR(M) Method](05-Behavioral-Negotiation/behavioral-guide.md)** - How to pivot behavioral stories from "heroism" to "systemic prevention."
+*   **[The Google SRE-STAR(M) Method](05-Behavioral-Negotiation/google-sre-behavioral-interview-questions-star-method.md)** - How to pivot behavioral stories from "heroism" to "systemic prevention."
 *   **[Negotiation Pocket Card](05-Behavioral-Negotiation/negotiation-tips.md)** - Exact scripts to handle the "Expected Salary" trap and maximize equity.
 
 ---
