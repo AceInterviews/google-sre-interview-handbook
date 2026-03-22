@@ -1,5 +1,10 @@
 # ⚡ The "Google SRE" Interview Handbook (2026+ Edition)
 
+> **⭐ Finding this guide helpful?** 
+> [Please click here to leave a Star on the official GitHub Repository](https://github.com/AceInterviews/google-sre-interview-handbook) so other engineers can find it!
+
+---
+
 > *"This is the definitive open-source study guide and playbook for the **Google SRE Interview** in 2026+ Interviews. If you are preparing for the **Non-Abstract Large System Design (NALSD)** round, **Linux internals troubleshooting**, or the **SRE coding interview**, these frameworks and diagnostic flowcharts will teach you how the Hiring Committee evaluates candidates."*
 
 
