@@ -27,6 +27,11 @@ It explains **how you are judged** — not whether you can execute under pressur
 > *"I took your bundle... it helped me clear my practical coding/scripting round for an **L4 SRE role at Google**. It didn't just give me questions; it taught me how to **talk like an SRE**, using the right words like 'streaming' and 'iterators.' It was much more than Time and Space complexities."*
 > 
 > — **Ram M.**, (Cleared Google L4 Coding Round)
+>
+> > ### 📺 Watch the Breakdowns
+> I regularly post deep-dives into these exact Google SRE interview patterns on YouTube.
+> 
+> 👉 **[https://www.youtube.com/watch?v=HJHQIm_3zec]**
 
 
 ## 🚨 Why Most Strong Candidates Still Fail
