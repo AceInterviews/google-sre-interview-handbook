@@ -34,8 +34,8 @@ It explains **how you are judged** — not whether you can execute under pressur
 ---
 > > ### 📺 Watch the Breakdowns
 > I regularly post deep-dives into these exact Google SRE interview patterns on YouTube.
-> 
-> 👉 **[https://www.youtube.com/watch?v=HJHQIm_3zec]**
+>
+> 👉 **[Click here to watch the full breakdown on YouTube](https://www.youtube.com/watch?v=HJHQIm_3zec)**
 ---
 
 ## 🚨 Why Most Strong Candidates Still Fail
