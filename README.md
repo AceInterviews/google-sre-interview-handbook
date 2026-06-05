@@ -1,3 +1,7 @@
+<img width="832" height="1248" alt="FJRU9" src="https://github.com/user-attachments/assets/021d4b29-e49b-494c-95a8-b873a7933343" />
+
+
+
 # ⚡ The "Google SRE" Interview Handbook (2026+ Edition)
 
 > **⭐ Finding this guide helpful?** 
