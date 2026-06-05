@@ -27,12 +27,12 @@ It explains **how you are judged** — not whether you can execute under pressur
 > *"I took your bundle... it helped me clear my practical coding/scripting round for an **L4 SRE role at Google**. It didn't just give me questions; it taught me how to **talk like an SRE**, using the right words like 'streaming' and 'iterators.' It was much more than Time and Space complexities."*
 > 
 > — **Ram M.**, (Cleared Google L4 Coding Round)
->
+---
 > > ### 📺 Watch the Breakdowns
 > I regularly post deep-dives into these exact Google SRE interview patterns on YouTube.
 > 
 > 👉 **[https://www.youtube.com/watch?v=HJHQIm_3zec]**
-
+---
 
 ## 🚨 Why Most Strong Candidates Still Fail
 
@@ -407,6 +407,17 @@ Google hires people who:
 * choose tools intentionally
 
 This playbook teaches exactly that.
+
+---
+> ## 🚫 What is NOT inside this free repository
+> 
+> This repo contains roughly 15% of the overall framework. It gives you the theory. It does not give you the simulation.
+> 
+> **The Premium Bundle (The Complete SRE Career Launchpad) additionally includes:**
+> *   **✓ 20+ Deep-Dive Production Incidents** (Complete with Interviewer Prompts, Mitigation paths, and Hidden Scorecards).
+> *   **✓ 70+ Production-Grade Coding Drills** (Python & Go patterns focusing on concurrency, safety, and streaming).
+> *   **✓ The Offer Maximizer** (Word-for-word negotiation scripts for L4/L5/L6 bands).
+> *   **✓ The First 90 Days Survival Guide** (How to build trust and automate toil instantly).
 
 ---
 
