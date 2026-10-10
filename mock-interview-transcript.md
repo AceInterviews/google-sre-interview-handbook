@@ -1,3 +1,202 @@
+# Google SRE NALSD Mock Interview: Global LLM Inference Platform
+
+> **Why include this:** This is our strongest flagship NALSD scenario for this entire Google SRE bundle. Google's public AI infrastructure direction makes it a credible forward-looking practice problem, although the exact interview prompt is unverified. Senior-level Google SRE-style NALSD mock interview for 2027+ preparation: global LLM inference capacity planning, token throughput, KV-cache sizing, accelerator provisioning, regional failure reserves, and infrastructure BOM.
+
+> **The math that matters:** Input/output token throughput, concurrent streams, accelerator throughput, KV-cache footprint, prefill/decode capacity, and regional failure reserves.
+
+**Interview simulation** · **Senior infrastructure engineering** · **Capacity sizing and BOM**
+
+We will treat this as a live, interviewer-led NALSD round. The candidate will reason aloud, calculate resource requirements, justify architectural decisions, and respond to follow-up questions as they arise.
+
+One distinction upfront: this is a realistic simulated interview, not a transcript of an actual Google interview. The prompt and constraints are supplied; accelerator throughput, model configuration details, and hardware prices are not. Where those missing inputs affect the BOM, the candidate will state assumptions rather than invent benchmark results.
+
+The objective is to demonstrate how a strong candidate approaches the problem in the interview—not to recite a prewritten architecture.
+
+---
+
+## Phase 1 — Clarify the problem (Minutes 0–5)
+
+### INTERVIEWER
+> "Design a globally distributed LLM inference platform with hierarchical KV-cache management for Gemini-class models. We need 100,000 QPS globally, 4,000 input tokens on average, 500 output tokens, P99 TTFT under 300 milliseconds, P99 TPOT under 25 milliseconds, and 99.95% availability. How would you design it?"
+
+### CANDIDATE
+> "I would start by establishing the workload and the resource constraints. At this scale, the critical question is not just how many requests we can accept, but how much prefill computation, decode throughput, accelerator memory, and network capacity those requests consume.
+> 
+> I have three clarifications before sizing the system.
+> 
+> **First**, is 100,000 QPS the peak aggregate across all regions, and should I assume that traffic can be unevenly distributed?
+> 
+> **Second**, are the input and output token counts averages for initial and subsequent chat turns combined, or should I model separate workload classes?
+> 
+> **Third**, should I assume a particular accelerator and benchmarked model throughput, or can I use explicit planning assumptions and derive a conditional BOM?"
+
+### INTERVIEWER — SIMULATED RESPONSE
+> "Treat 100,000 QPS as peak global traffic. Traffic is uneven, and multi-turn sessions reuse prefixes. Use a representative accelerator configuration, but state your assumptions. We expect regional failure tolerance."
+
+**Candidate's interpretation:** I will design for peak traffic rather than average daily traffic. I will distinguish logical conversation history from reusable KV-cache state. I will also avoid assuming that all requests consume the same amount of accelerator time.
+
+The SLOs are requirements to validate, not performance guarantees that can be claimed before sizing and testing.
+
+---
+
+## Phase 2 — Workload math and the first capacity boundary (Minutes 5–12)
+
+The first calculations establish the amount of work entering the platform.
+
+### 1. Input and output token throughput
+
+**Given:**
+- Peak request rate: $100,000\text{ requests/second}$.
+- Average input: $4,000\text{ tokens/request}$.
+- Average output: $500\text{ tokens/request}$.
+
+**Input-token rate:**
+$$100,000 \times 4,000 = 400,000,000$$
+That is **400 million input tokens per second** before accounting for cache hits.
+
+**Output-token rate:**
+$$100,000 \times 500 = 50,000,000$$
+That is **50 million generated tokens per second**.
+
+| Input throughput | Output throughput |
+| :--- | :--- |
+| **400M** <br>tokens/second | **50M** <br>tokens/second |
+
+*These are logical workload rates before prefix-cache savings, not measured accelerator throughput.*
+
+---
+
+### 2. Concurrent generation streams
+
+If we assume an average request generates 500 tokens at an average of 25 milliseconds per token, the estimated generation duration is:
+$$500 \times 0.025 = 12.5\text{ seconds}$$
+
+Using Little's Law, the approximate number of concurrent generation streams is:
+$$100,000 \times 12.5 = 1,250,000$$
+
+So the initial planning estimate is **1.25 million concurrent generation streams**.
+
+But I would explicitly tell the interviewer that this estimate assumes the stated 25 milliseconds is representative of average token-generation time. The actual requirement is a P99 TPOT bound, so the average cannot be derived from the P99 alone. We need a measured or separately specified average to finalize concurrency.
+
+---
+
+### 3. The first interviewer challenge
+
+### INTERVIEWER
+> "You have calculated 1.25 million streams. Does that mean you need 1.25 million independent accelerator allocations?"
+
+### CANDIDATE
+> "No. That is the concurrency across the serving fleet, not the number of accelerators. Continuous batching allows an accelerator to serve multiple sequences concurrently, subject to memory capacity, memory bandwidth, and the latency target.
+> 
+> I need measured per-accelerator throughput and a validated batch configuration to translate these streams into an accelerator count. I will calculate memory demand next, because the KV cache can limit the feasible concurrency even when compute capacity appears sufficient."
+
+## Phase 3 — KV-cache sizing: the first major physical constraint (Minutes 12–20)
+
+### Candidate's whiteboard calculation
+> "I'll use an explicit example KV-cache configuration so the estimate is reproducible. Assume 64 transformer layers, 8 KV heads, a head dimension of 128, and one byte per KV value. These are illustrative assumptions, not a claim about Gemini's internal architecture."
+
+For each token, the cache holds both keys and values:
+
+$$KV_{bytes} = 2 \times L \times H_{KV} \times D \times B$$
+$$= 2 \times 64 \times 8 \times 128 \times 1$$
+$$= 131,072\text{ bytes}$$
+
+That is **128 KiB per token** before implementation-specific overhead.
+
+For an active request containing approximately 4,250 tokens:
+
+$$4,250 \times 131,072 = 557,056,000\text{ bytes}$$
+
+That is approximately **557 MB per request** under this particular configuration.
+
+This number is large, but it follows directly from the stated assumptions. It is not a universal KV-cache footprint.
+
+---
+
+### Estimate aggregate cache demand
+
+Using the illustrative concurrency estimate of 1.25 million active requests:
+
+$$KV_{total} = 1.25 \times 10^6 \times 557.056\text{ MB}$$
+$$\approx 696\text{ PB}$$
+
+| Illustrative uncached aggregate KV footprint |
+| :---: |
+| # ≈ 696 PB |
+
+This is a workload-derived theoretical footprint, not a proposed HBM allocation.
+
+The estimate assumes the example KV format and dimensions apply to all requests, all estimated token positions remain resident, and prefix sharing provides no reduction. Actual cache residency can differ substantially.
+
+---
+
+### Interviewer challenge
+
+### INTERVIEWER
+> "You have just calculated hundreds of petabytes of KV state. Are you proposing to buy that much accelerator memory?"
+
+### CANDIDATE
+> "No. The calculation exposes why we cannot retain every request's full KV state in accelerator HBM. It also tells me that I must validate the workload assumptions before committing to the hardware budget.
+> 
+> I would separate three things: active decode state that must be immediately accessible, reusable prefix state that can be cached, and conversation history that can be persisted and recomputed when necessary.
+> 
+> I would also verify the actual model's KV dimensions and precision. If the interviewer expects a feasible production BOM, I need benchmarked per-accelerator throughput and a realistic cache-residency target. Otherwise, the aggregate figure is a useful upper-bound scenario, not a purchase order."
+
+This is an important NALSD moment: the candidate has used math to expose a constraint instead of jumping to a familiar architecture.
+
+### The interviewer pushes further
+### INTERVIEWER
+> "Fine. The platform must still support multi-turn conversations. How will you manage the cache, how many accelerator nodes do you need across prefill and decode, and what happens to our latency budget when a primary region goes dark?"
+
+---
+
+## 🔒 End of Preview: Sizing the Architecture
+
+You have reached the end of the public preview (Phases 1–3). 
+
+Most candidates fail NALSD interviews at this exact moment: they freeze when faced with physical hardware ceilings like the 696 PB KV-cache footprint, or they throw arbitrary GPU counts at the board without deriving capacity. Passing an L5/L6 Google SRE round requires using mathematical constraints to dictate the architectural boundary before placing a single server.
+
+---
+
+### 🗺️ What’s Inside the Full Walkthrough: Phases 4 through 6
+
+In the complete interview session included in our bundle, the candidate steps through the rest of the 45-minute loop:
+
+* **Phase 4 — Compute, Accelerator, and Network Sizing (Minutes 20–30)**
+  * **Quantized Model Footprint:** Sharding a 70B parameter model across 8-accelerator hosts (640 GB aggregate physical HBM) and calculating real usable capacity.
+  * **Throughput Sizing Formulas:** Deriving exact prefill ($N_{\text{prefill}}$) and decode ($N_{\text{decode}}$) node counts at target utilization ($u = 60\%$).
+  * **Network Fabric Math:** Calculating the 1.6 Gbps+ outbound payload rate and isolating the prefill-to-decode KV transfer bandwidth to prevent congestion-driven tail latency.
+
+* **Phase 5 — Architecture Derived from Sizing Constraints (Minutes 30–37)**
+  * **End-to-End Request Path:** Designing the global routing layer, admission control, and prefix-aware scheduling across prefill and decode pools.
+  * **Hierarchical Cache Retention:** Engineering the HBM $\rightarrow$ Host DRAM $\rightarrow$ Durable conversation history storage pipeline.
+  * **Regional Failover Math:** Sizing surviving regions for the exact +33.3% load shift during an $N-1$ failure without exceeding TTFT/TPOT latency bounds.
+
+* **Phase 6 — Final BOM, SLO Validation, and Conclusion (Minutes 37–45)**
+  * **The Complete Production BOM:** Sizing criteria across accelerator hosts, HBM, host DRAM, regional gateways, and the control plane.
+  * **Tail-Latency Validation Strategy:** Empirical testing plans for P99 TTFT, inter-token generation latency distributions, and retry amplification safeguards.
+  * **Scoring Breakdown:** The exact rubrics Google interviewers use to distinguish an L5 (Senior) from an L6 (Staff) candidate.
+
+---
+
+## 🚀 Get the Full Walkthrough & Complete Interview Bundle
+
+This scenario is just one part of the end-to-end curriculum designed to build your operational reflexes under real interview pressure.
+
+👉 **[Unlock the Full Walkthrough in the Google SRE Interview Career Launchpad](https://aceinterviews.gumroad.com/l/Google_SRE_Interviews_Your_Secret_Bundle_to_Conquer)**
+
+### What is inside the complete system:
+* **Full-Length NALSD & Troubleshooting Transcripts:** The complete, unabridged walkthroughs, mathematical proofs, and architectural blueprints for this global LLM platform and other flagship scenarios.
+* **20+ "War Room" Interview Simulations:** Realistic mock scenarios equipped with the hidden **Interviewer Scorecards**, follow-up traps, and rubric criteria.
+* **Linux Internals & Reliability Deep Dives:** Practical drills covering D-state processes, TCP connection backlogs, kernel memory pressure, and distributed consensus.
+* **70+ Production-Grade Coding Drills:** Systems-focused Python & Go drills emphasizing concurrency, streaming, backpressure, and defensive design.
+* **The Offer Maximizer:** Negotiation frameworks and word-for-word scripts to secure top-of-band L5/L6 compensation packages.
+
+**Stop guessing the math under pressure. Master the simulation.**
+
+
+---
+
 # 🎧 The "Fly-on-the-Wall" Mock Interview Transcript
 
 > **“In an SRE interview, the silence of the interviewer is the loudest signal.”**
