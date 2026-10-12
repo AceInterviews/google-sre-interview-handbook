@@ -45,6 +45,8 @@ This repository is designed to teach you the **green path**.
 
 To get the most out of this handbook, do not read it randomly. We have organized the knowledge into specific phases. 
 
+* 🔮 **[NEW: 2027+ Google SRE NALSD Round Predictions & 10 Flagship Simulations](GOOGLE-SRE-2027-PREDICTIONS_10-REAL-NALSD-SCENARIOS.md)** - Previews of the top 10 cutting-edge prompts (Agentic loops, 3MW power shedding, PQC rollouts, and LLM KV-cache sizing).
+
 ### 🌟 The "Shock and Awe" Root Files (Start Here)
 If you only have 15 minutes today, read these files located in the root directory. They expose the "meta-game" of the interview:
 *   👉 **[Real Interview Patterns](REAL-INTERVIEW-PATTERNS_2.md):** How interviewers use twists and silence to break you.
