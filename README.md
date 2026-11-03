@@ -459,8 +459,7 @@ It exists because reading frameworks does not build reflexes.
 
 If you want the **complete end-to-end preparation system**—including practice workbooks, mock simulations, and deep-dive scenarios—check out the full bundle:
 
-👉 **The Complete Google SRE Career Launchpad**
-[https://aceinterviews.gumroad.com/l/Google_SRE_Interviews_Your_Secret_Bundle_to_Conquer](https://aceinterviews.gumroad.com/l/Google_SRE_Interviews_Your_Secret_Bundle_to_Conquer)
+👉 **[The Complete Google SRE Career Launchpad](https://aceinterviews.gumroad.com/l/Google_SRE_Interviews_Your_Secret_Bundle_to_Conquer)**
 
 **What's included in the full system:**
 *   📘 **20+ Production Scenarios:** Deep dives into Kernel Panics, BGP Leaks, and connection storms, complete with interviewer scoring prompts.
@@ -474,7 +473,7 @@ Use it or don’t — but understand the difference.
 
 # ACE INTERVIEWS - Don't just draw the architecture. Prove that it can survive the workload.
 
-👉 **Our YouTube Channel:** https://www.youtube.com/channel/UCFWIYzUOTimhYb4gzHd19rA
+👉 **[Our YouTube Channel](https://www.youtube.com/channel/UCFWIYzUOTimhYb4gzHd19rA)**
 
 ## 🤝 Contributing
 Contributions are welcome! Please open an issue or PR if you have additional commands, patterns, or interview insights to share.
