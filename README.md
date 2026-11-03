@@ -472,6 +472,10 @@ Use it or don’t — but understand the difference.
 
 ---
 
+# ACE INTERVIEWS - Don't just draw the architecture. Prove that it can survive the workload.
+
+👉 **Our YouTube Channel:** https://www.youtube.com/channel/UCFWIYzUOTimhYb4gzHd19rA
+
 ## 🤝 Contributing
 Contributions are welcome! Please open an issue or PR if you have additional commands, patterns, or interview insights to share.
 
