@@ -1,15 +1,16 @@
-<img width="832" height="1248" alt="FJRU9" src="https://github.com/user-attachments/assets/021d4b29-e49b-494c-95a8-b873a7933343" />
+<img width="1024" height="1536" alt="Google SRE 2027 Predictions Poster" src="https://github.com/user-attachments/assets/2bb64daa-ede1-4485-8140-76af8ffa0222" />
 
 
 
-# ⚡ The "Google SRE" Interview Handbook (2026+ Edition)
+
+# ⚡ The "Google SRE" Interview Handbook (2027+ Edition)
 
 > **⭐ Finding this guide helpful?** 
 > [Please click here to leave a Star on the official GitHub Repository](https://github.com/AceInterviews/google-sre-interview-handbook) so other engineers can find it!
 
 ---
 
-> *"This is the definitive open-source study guide and playbook for the **Google SRE Interview** in 2026+ Interviews. If you are preparing for the **Non-Abstract Large System Design (NALSD)** round, **Linux internals troubleshooting**, or the **SRE coding interview**, these frameworks and diagnostic flowcharts will teach you how the Hiring Committee evaluates candidates."*
+> *"This is the definitive open-source study guide and playbook for the **Google SRE Interview** in 2027+ Interviews. If you are preparing for the **Non-Abstract Large System Design (NALSD)** round, **Linux internals troubleshooting**, or the **SRE coding interview**, these frameworks and diagnostic flowcharts will teach you how the Hiring Committee evaluates candidates."*
 
 
 > **"The definitive open-source playbook for the modern Google Site Reliability Engineer (SRE). Moving beyond LeetCode to NALS, Linux Internals, and Reliability Architecture.An open-source map of how Google evaluates modern Site Reliability Engineers (SREs) — not a list of things to memorize."**
@@ -40,7 +41,7 @@ It explains **how you are judged** — not whether you can execute under pressur
 
 ## 🚨 Why Most Strong Candidates Still Fail
 
-| 2020 Google SRE Interview Style | 2026 Google SRE Reality |
+| 2020 Google SRE Interview Style | 2027+ Google SRE Reality |
 | :--- | :--- |
 | Can you debug an outage? | Can you **auto-mitigate** before a human is paged? |
 | Do you know Linux commands? | Do you have **kernel-level intuition** (eBPF, CFS)? |
