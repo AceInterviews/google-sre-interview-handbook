@@ -1,4 +1,4 @@
-<img width="1024" height="1536" alt="Google SRE 2027 Predictions Poster" src="https://github.com/user-attachments/assets/2bb64daa-ede1-4485-8140-76af8ffa0222" />
+<img width="1254" height="1254" alt="Google SRE Masterclass_ What Nobody Posts" src="https://github.com/user-attachments/assets/18b79991-9099-4344-a00b-db8149c9f9d9" />
 
 
 
